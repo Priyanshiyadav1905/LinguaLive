@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('https://plus.unsplash.com/premium_photo-1666739032615-ecbd14dfb543?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGFuZ3VhZ2VzfGVufDB8fDB8fHww') no-repeat center center/cover;
+}
+.container{
+    width: 690px;
+    background:white ;
+    border-radius: 7px;
+    padding: 30px;
+}
+.wrapper{
+    border-radius: 5px;
+    border: 1px solid #bbb;
+}
+.wrapper .text-input{
+    display: flex;
+    border-bottom: 1px solid #bbb;
+}
+.text-input .to-text{
+    border-left: 1px solid #bbb;
+    border-radius: 0px;
+}
+.text-input textarea{
+    height: 250px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: none;
+    font-size: 18px;
+    border-radius: 5px;
+    background: none;
+    padding: 10px 15px;
+    
+}
+.controls, li, .icons .icons i{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.controls{
+    list-style: none;
+    padding: 12px 15px;
+}
+.controls .row.from .icons{
+    padding-right: 15px;
+    border-right: 1px solid #bbb;
+}
+.controls .row.to .icons{
+    padding-left: 15px;
+    border-left: 1px solid #bbb;
+}
+.controls .icons{
+    width: 38%;
+    display: flex; 
+    gap: 10px;
+    align-items: center;
+}
+.controls .icons i{
+    width: 50px;
+    color:rgb(134, 134, 214);
+    font-size: 20px;
+    cursor: pointer;
+    justify-content: center;
+}
+.controls .row select{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: none;
+}
+.controls .exchange{
+    color: rgb(210, 213, 216);
+    font-size: 16px;
+    cursor: pointer;
+}
+.container button{
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background: #5372F0;
+    border-radius: 5px;
+    font-size: 17px;
+}
+select {
+    display: block;  /* Ensures it's visible */
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background: white;
+}
+
