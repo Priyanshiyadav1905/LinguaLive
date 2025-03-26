@@ -5,24 +5,20 @@ const fromText = document.querySelector(".from-text"),
     translateBtn = document.querySelector("button"),
     icons = document.querySelectorAll(".icons i");
 
-// ✅ Fix: Ensure select options are properly added
 selectTag.forEach((tag, id) => {
     for (const country_code in countries) {
         let option = document.createElement("option");
         option.value = country_code;
         option.textContent = countries[country_code];
 
-        // ✅ Set default selected languages
         if ((id === 0 && country_code === "en-GB") || (id === 1 && country_code === "hi-IN")) {
             option.selected = true;
         }
 
-        tag.appendChild(option);  // ✅ Properly appending to the dropdown
+        tag.appendChild(option);  
     }
 });
 
-
-// ✅ Fix: Swap language and text correctly
 exchangeIcon.addEventListener("click", () => {
     let tempText = fromText.value,
         tempLang = selectTag[0].value;
@@ -33,13 +29,12 @@ exchangeIcon.addEventListener("click", () => {
     selectTag[1].value = tempLang;
 });
 
-// ✅ Fix: Correct event listener typo
 translateBtn.addEventListener("click", () => {
     let text = fromText.value,
         translateFrom = selectTag[0].value,
         translateTo = selectTag[1].value;
 
-    if (!text) return;  // Prevent empty requests
+    if (!text) return;  
 
     let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
 
@@ -52,7 +47,6 @@ translateBtn.addEventListener("click", () => {
         .catch(error => console.error("Translation API Error:", error));
 });
 
-// ✅ Fix: Copy and Speech Synthesis Functions
 icons.forEach(icon => {
     icon.addEventListener("click", ({ target }) => {
         if (target.classList.contains("fa-copy")) {
